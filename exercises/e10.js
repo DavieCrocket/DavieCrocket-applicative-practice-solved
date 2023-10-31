@@ -1,12 +1,18 @@
-import { data } from "../data/data";
+ import { data } from "../data/data";
 
 // SPACE DATA EXERCISE 10
 // Return a given asteroid object of data
 // Return example: { key1: value1, key2: value2, ... , keyN: valueN }
 
 export function getAsteroidDataByName(data, asteroidName) {
-  // Your code goes here...
+  return data.asteroids.filter(function(myAsteroidName) {
+    var foundAsteroid = myAsteroidName.name.includes(asteroidName);
+    return foundAsteroid;
+  })[0];
 }
+
+var asteroidName = 'Ceres';
+getAsteroidDataByName(data, asteroidName);
 
 
 
