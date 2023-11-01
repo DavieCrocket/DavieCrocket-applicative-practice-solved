@@ -5,7 +5,7 @@ import { data } from "../data/data";
 // Return example: ['name1', 'name2', ... , 'nameN']
 
 export function getPlanetsNamesWithMoons(data) {
-   let planetList = [];
+  let planetList = [];
   data.planets.filter(function(planet) {
     if (planet.moons) {
       return planetList.push(planet.name);
