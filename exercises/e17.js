@@ -8,16 +8,71 @@
  * * maxBy(): Return the element where the callback function on that element yields the highest value
  */
 
-export function minBy(array, cb) {
-  // Your code goes here...
 
+export function minBy(array, callback) {
+  if (array.length !== 0) {
+    let firstVal = callback(array[0]);
+    let minValue = [];
+    for (let element of array) {
+      let dataVal = callback(element);
+      if (dataVal < firstVal) {
+        firstVal = dataVal;
+        minValue = element;
+        console.log(minValue);
+      }
+    }
+    return minValue;
+  }
+}
+
+
+export function maxBy(array, callback) {
+  if (array.length !== 0) {
+    let firstVal = callback(array[0]);
+    let minValue = [];
+    for (let element of array) {
+      let dataVal = callback(element);
+      if (dataVal > firstVal) {
+        firstVal = dataVal;
+        minValue = element;
+        console.log(minValue);
+      }
+    }
+    return minValue;
+  }
+}
+
+/* 
+export function minBy(array, cb) {
+  let returnArray = array[0];
+
+  for (let element of array) {
+    if (cb(element) < returnArray[0]) {
+      console.log(element);
+      returnArray.pop();
+      returnArray.push(element);
+      return returnArray;
+    }
+  }
+
+  return;
 }
 
 export function maxBy(array, cb) {
-  // Your code goes here...
+  let returnArray = array[0];
 
+  for (let element of array) {
+    if (cb(element) > returnArray[0]) {
+      returnArray.pop();
+      returnArray.push(element);
+      return returnArray;
+    }
+  }
+
+  return returnArray;
 }
 
+ */
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-17"
