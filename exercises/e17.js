@@ -42,37 +42,7 @@ export function maxBy(array, callback) {
   }
 }
 
-/* 
-export function minBy(array, cb) {
-  let returnArray = array[0];
 
-  for (let element of array) {
-    if (cb(element) < returnArray[0]) {
-      console.log(element);
-      returnArray.pop();
-      returnArray.push(element);
-      return returnArray;
-    }
-  }
-
-  return;
-}
-
-export function maxBy(array, cb) {
-  let returnArray = array[0];
-
-  for (let element of array) {
-    if (cb(element) > returnArray[0]) {
-      returnArray.pop();
-      returnArray.push(element);
-      return returnArray;
-    }
-  }
-
-  return returnArray;
-}
-
- */
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-17"
