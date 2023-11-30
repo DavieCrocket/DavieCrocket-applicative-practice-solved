@@ -6,10 +6,10 @@ import { data } from "../data/data";
 
 export function getOrbitalPeriodsSum(data) {
   let orbitalPeriodSum = 0;
-  data.asteroids.filter(function(asteroid) {
-    orbitalPeriodSum += asteroid.orbitalPeriod;
-    return orbitalPeriodSum;
-  })
+  data.asteroids
+    .filter((asteroid) => {
+      orbitalPeriodSum += asteroid.orbitalPeriod;
+    })
   return orbitalPeriodSum;
 }
 

@@ -5,18 +5,12 @@ import { data } from "../data/data";
 // Return example: 132.53
 
 export function getAveragePlanetsTemperature(data) {
-  let planetTempSum = 0;
-  let avgTemp = 0;
-  data.planets.filter(function(planet) {
-    planetTempSum += planet.avgTemp;
-    avgTemp = planetTempSum / data.planets.length;
-    // console.log(avgTemp);
-    return avgTemp;
-  })
-  return avgTemp;
+  return data.planets
+    .filter((planet) => planet.avgTemp)
+    .map((temp) => temp.avgTemp)
+    .reduce((total,value) => total + value, 0) / data.planets.length;
 }
 
-getAveragePlanetsTemperature(data);
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-13"

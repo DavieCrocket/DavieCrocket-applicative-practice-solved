@@ -5,18 +5,16 @@ import { data } from "../data/data";
 // Return example: 42
 
 export function allPlanetsMoonsCount(data) {
-  let moonsCount = 0;
-  data.planets.filter(function(planet) {
-    if (planet.moons) {
-      moonsCount += planet.moons.length;
-      console.log(moonsCount);
-    }
-  }); 
-  return moonsCount;
+  let initialValue = 0;
+  return data.planets
+    .filter((planet) => planet.moonsCount)
+    .map((numMoons) => numMoons.moonsCount)
+    .reduce((total, value) => total + value, initialValue,
+  );
 }
 
 
-allPlanetsMoonsCount(data);
+// allPlanetsMoonsCount(data);
 
 
 

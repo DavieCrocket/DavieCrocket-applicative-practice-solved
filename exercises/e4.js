@@ -4,14 +4,10 @@ import { data } from "../data/data.js";
 // Return an array of Planets' names with gravity less than 10
 // Return example: ['name1', 'name2', ... , 'nameN']
 
-export function getPlanetsWithLowGravity(solarSystem) {
-  let gravityLessThan10 = [];
-  solarSystem.planets.filter(function(lowGravity) {
-    if (lowGravity.gravity < 10) {
-      gravityLessThan10.push(lowGravity.name);
-    }
-  });
-  return gravityLessThan10;
+export function getPlanetsWithLowGravity(data) {
+  return data.planets
+  .filter((planet) => planet.gravity < 10)
+  .map((planet) => planet.name);
 }
 
 // === TEST YOURSELF ===

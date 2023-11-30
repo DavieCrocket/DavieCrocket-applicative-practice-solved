@@ -5,14 +5,14 @@
 // Return example: { key1: value1, key2: value2, ... , keyN: valueN }
 
 export function getAsteroidDataByName(data, asteroidName) {
-  return data.asteroids.filter(function(myAsteroidName) {
-    var foundAsteroid = myAsteroidName.name.includes(asteroidName);
-    return foundAsteroid;
+  return data.asteroids
+    .filter((myAsteroidName) => {
+      return myAsteroidName.name.includes(asteroidName);
   })[0];
 }
 
-var asteroidName = 'Ceres';
-getAsteroidDataByName(data, asteroidName);
+/* var asteroidName = 'Ceres';
+getAsteroidDataByName(data, asteroidName); */
 
 
 

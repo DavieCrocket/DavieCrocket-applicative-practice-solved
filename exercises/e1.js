@@ -4,11 +4,7 @@
 
 // import { data } from "../data/data.js";
 export function getPlanetNames(data) {
-  let myPlanets = [];
-  data.planets.filter(function(planet){
-    myPlanets.push(planet.name);
-  });
-  return myPlanets;
+  return data.planets.map((planet) => planet.name);
 }
 
 // === TEST YOURSELF ===

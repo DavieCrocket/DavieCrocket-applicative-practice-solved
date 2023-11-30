@@ -5,7 +5,7 @@ import { data } from "../data/data.js";
 // Return example: 'Planet Name'
 
 export function findPlanetNameByMoon(data, moonName) {
-  return data.planets.filter(function(planet) {
+  return data.planets.filter((planet) => {
     if (planet.moons) {
       if (planet.moons.includes(moonName)){
         return planet;

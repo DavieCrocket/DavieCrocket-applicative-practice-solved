@@ -5,16 +5,15 @@ import { data } from "../data/data.js";
 // Return example: { key1: value1, key2: value2, ... , keyN: valueN }
 
 export function getEarthData(data) {
-  return data.planets.filter(function(planet) {
+  return data.planets.filter((planet) => {
     if (planet.id === 'earth') {
-      const myPlanet = data.planets[6];
-      return myPlanet;
+      return data.planets;
     }
   })[0];
 }
 
 
-getEarthData(data);
+// getEarthData(data);
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-9"

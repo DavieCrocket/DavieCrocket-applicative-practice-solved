@@ -10,36 +10,24 @@
 
 
 export function minBy(array, callback) {
-  if (array.length !== 0) {
-    let firstVal = callback(array[0]);
-    let minValue = [];
-    for (let element of array) {
-      let dataVal = callback(element);
-      if (dataVal < firstVal) {
-        firstVal = dataVal;
-        minValue = element;
-        console.log(minValue);
-      }
+  let lowest = array[0];
+  for(const person of array) {
+    if (callback(person) < callback(lowest)) {
+      lowest = person;
     }
-    return minValue;
   }
+  return lowest;
 }
 
 
 export function maxBy(array, callback) {
-  if (array.length !== 0) {
-    let firstVal = callback(array[0]);
-    let minValue = [];
-    for (let element of array) {
-      let dataVal = callback(element);
-      if (dataVal > firstVal) {
-        firstVal = dataVal;
-        minValue = element;
-        console.log(minValue);
-      }
+  let highest = array[0];
+  for(const person of array) {
+    if (callback(person) > callback(highest)) {
+      highest = person;
     }
-    return minValue;
   }
+  return highest;
 }
 
 
