@@ -5,11 +5,7 @@ import { data } from "../data/data.js";
 // Return example: { key1: value1, key2: value2, ... , keyN: valueN }
 
 export function getEarthData(data) {
-  return data.planets.filter((planet) => {
-    if (planet.id === 'earth') {
-      return data.planets;
-    }
-  })[0];
+  return data.planets.find((planet) => planet.name === 'Earth');
 }
 
 
